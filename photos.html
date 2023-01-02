@@ -6,7 +6,7 @@ pagination:
   size: 1
   alias: photo
 
-permalink: 'photos/{{ pagination.pageNumber | plus: 1 }}/'
+permalink: './photos/{{ pagination.pageNumber | plus: 1 }}/'
 ---
 
 <header>
@@ -14,7 +14,7 @@ permalink: 'photos/{{ pagination.pageNumber | plus: 1 }}/'
 
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
+      <li><a href="../../">Home</a></li>
       <li><a href="{{ pagination.href.first }}">First</a></li>
       <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
       <li>Page {{ pagination.pageNumber | plus: 1 }}</li>
